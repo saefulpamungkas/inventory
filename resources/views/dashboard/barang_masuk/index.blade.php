@@ -47,7 +47,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Barang</th>
+                                            <th>Kode Barang</th>
                                             <th>Jumlah Masuk</th>
                                             <th>Tanggal Masuk</th>
                                             <th>Spek Barang</th>
@@ -58,7 +58,7 @@
                                         @foreach ($barMasuk as $bar)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $bar->barang->nama_barang }}</td>
+                                                <td>{{ $bar->barang->kode_barang }}</td>
                                                 <td>{{ $bar->jumlah_barang }}</td>
                                                 <td>{{ $bar->tanggal_masuk }}</td>
                                                 <td>{{ $bar->barang->spek_barang }}</td>
@@ -114,11 +114,20 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Barang Masuk</label>
+                            <label for="">Barang</label>
                             <select class="form-control" name="id_barang" id="id_barang" required>
-                                <option selected disabled>-- Pilih Barang --</option>
+                                <option selected disabled>-- Pilih Kode --</option>
                                 @foreach ($barang as $bar)
-                                    <option value="{{ $bar->id }}">{{ $bar->nama_barang }}</option>
+                                    <option value="{{ $bar->id }}">{{ $bar->kode_barang }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Spek Barang</label>
+                            <select class="form-control" name="id_barang" id="id_barang" required>
+                                <option selected disabled>-- Pilih Spek Barang --</option>
+                                @foreach ($barang as $bar)
+                                    <option value="{{ $bar->id }}">{{ $bar->spek_barang }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -132,13 +141,7 @@
                             <input type="date" class="form-control" name="tanggal_masuk" id="tanggal_masuk"
                                 placeholder="" required>
                         </div>
-                        <label for="">Spek Barang</label>
-                        <select class="form-control" name="id_barang" id="id_barang" required>
-                            <option selected disabled>-- Pilih Spek Barang --</option>
-                            @foreach ($barang as $bar)
-                                <option value="{{ $bar->id }}">{{ $bar->spek_barang }}</option>
-                            @endforeach
-                        </select>
+
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save
@@ -307,7 +310,7 @@
             </div>
         </div>
     @endforeach
-    
+
     <!-- Modal -->
     @foreach ($barMasuk as $hapus)
         <div class="modal fade" id="modalHapus{{ $hapus->id }}" tabindex="-1" role="dialog" aria-hidden="true">
