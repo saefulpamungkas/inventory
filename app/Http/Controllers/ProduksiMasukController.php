@@ -85,4 +85,15 @@ class ProduksiMasukController extends Controller
         $prodMasuk->delete();
         return redirect('/dashboard/produksi/masuk')->with('success', 'Data Berhasil Dihapus');
     }
+
+    public function laporan()
+    {
+        return view('dashboard.laporan_produksi.produksimasuk', [
+            'title' => 'Produksi Masuk',
+            'produksi' => Produksi::all(),
+            'proMasuk' => ProduksiMasuk::all(),
+            'produksi' => Produksi::all(),
+            'produsen' => Produsen::all()
+        ]);
+    }
 }

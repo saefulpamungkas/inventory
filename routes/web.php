@@ -92,4 +92,7 @@ Route::get('/dashboard/produksi/keluar/destroy/{id}', [ProduksiKeluarController:
 //Laporan Barang
 Route::get('/dashboard/datalaporan/barangmasuk', [BarangMasukController::class, 'laporan']);
 Route::get('/dashboard/datalaporan/barangkeluar', [BarangKeluarController::class, 'laporan']);
-Route::get('/dashboard/datalaporan/produksi', [ProduksiController::class, 'laporan']);
+
+//Laporan Produksi
+Route::get('/dashboard/laporanproduksi/produksimasuk', [ProduksiMasukController::class, 'laporan']);
+Route::get('/dashboard/laporanproduksi/produksikeluar', [ProduksiKeluarController::class, 'laporan']);

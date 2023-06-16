@@ -80,4 +80,15 @@ class ProduksiKeluarController extends Controller
         $prodKeluar->delete();
         return redirect('/dashboard/produksi/keluar')->with('success', 'Data Berhasil Dihapus');
     }
+
+    public function laporan()
+    {
+        return view('dashboard.laporan_produksi.produksikeluar', [
+            'title' => 'Produksi Keluar',
+            'produksi' => Produksi::all(),
+            'proKeluar' => ProduksiKeluar::all(),
+            'produksi' => Produksi::all(),
+            'produsen' => Produsen::all()
+        ]);
+    }
 }

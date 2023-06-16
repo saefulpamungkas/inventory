@@ -108,7 +108,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">No Telephone</label>
-                            <input type="text" class="form-control" name="no_telp" id="no_telp"
+                            <input type="number" class="form-control" name="no_telp" id="no_telp"
                                 placeholder="Masukan Angka" required>
                         </div>
                         <div class="form-group">
@@ -158,7 +158,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">No Telephone</label>
-                                <input type="text" class="form-control" value="{{ $sup->no_telp }}" name="no_telp"
+                                <input type="number" class="form-control" value="{{ $sup->no_telp }}" name="no_telp"
                                     id="no_telp" placeholder="Masukan Angka" required>
                             </div>
                             <div class="form-group">

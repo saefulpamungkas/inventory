@@ -107,12 +107,12 @@
                     </li>
                 @endcan
                 <li class="nav-item {{ Request::is('dashboard/datalaporan*') ? 'active' : '' }}">
-                    <a data-toggle="collapse" href="#laporan">
+                    <a data-toggle="collapse" href="#laporanBarang">
                         <i class="fas fa-file-alt"></i>
-                        <p>Data Laporan</p>
+                        <p>Laporan Barang</p>
                         <span class="caret"></span>
                     </a>
-                    <div class="collapse" id="laporan">
+                    <div class="collapse" id="laporanBarang">
                         <ul class="nav nav-collapse">
                             <li class="{{ Request::is('dashboard/datalaporan/barangmasuk') ? 'active' : '' }}">
                                 <a href="/dashboard/datalaporan/barangmasuk">
@@ -124,9 +124,25 @@
                                     <span class="sub-item">Barang Keluar</span>
                                 </a>
                             </li>
-                            <li class="{{ Request::is('dashboard/datalaporan/produksi') ? 'active' : '' }}">
-                                <a href="/dashboard/datalaporan/produksi">
-                                    <span class="sub-item">Barang Produksi</span>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item {{ Request::is('dashboard/laporanproduksi*') ? 'active' : '' }}">
+                    <a data-toggle="collapse" href="#laporanProduksi">
+                        <i class="fas fa-file-alt"></i>
+                        <p>Laporan Produksi</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="laporanProduksi">
+                        <ul class="nav nav-collapse">
+                            <li class="{{ Request::is('dashboard/laporanproduksi/produksimasuk') ? 'active' : '' }}">
+                                <a href="/dashboard/laporanproduksi/produksimasuk">
+                                    <span class="sub-item">Produksi Masuk</span>
+                                </a>
+                            </li>
+                            <li class="{{ Request::is('dashboard/laporanproduksi/produksikeluar') ? 'active' : '' }}">
+                                <a href="/dashboard/laporanproduksi/produksikeluar">
+                                    <span class="sub-item">Produksi Keluar</span>
                                 </a>
                             </li>
                         </ul>

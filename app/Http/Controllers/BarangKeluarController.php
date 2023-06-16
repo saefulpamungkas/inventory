@@ -85,7 +85,7 @@ class BarangKeluarController extends Controller
 
     public function laporan()
     {
-        return view('dashboard.data_laporan.barangkeluar', [
+        return view('dashboard.data_laporan.laporan_barang.barangkeluar', [
             'title' => 'Barang Keluar',
             'barKeluar' => BarangKeluar::all(),
             'barang' => Barang::all()

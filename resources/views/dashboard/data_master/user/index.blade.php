@@ -49,7 +49,7 @@
                                                 <th>Nama User</th>
                                                 <th>Email</th>
                                                 <th>Role</th>
-                                                <th>Action</th>
+                                                {{-- <th>Action</th> --}}
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -59,7 +59,7 @@
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
                                                     <td>{{ $user->role }}</td>
-                                                    <td>
+                                                    {{-- <td>
                                                         <a href="#modalEdit{{ $user->id }}" data-toggle="modal"
                                                             class="btn btn-xs btn-warning"><i class="fa fa-edit"></i>
                                                             Edit</a>
@@ -67,7 +67,7 @@
                                                             class="btn btn-xs btn-danger" id="alert_demo_7"><i
                                                                 class="fa fa-trash"></i>
                                                             Hapus</a>
-                                                    </td>
+                                                    </td> --}}
                                                 </tr>
                                             @endforeach
                                         </tbody>
@@ -171,8 +171,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Nama User</label>
-                                <input type="text" value="{{ $edit->username }}" class="form-control"
-                                    name="namaUser" id="namaUser" placeholder="Nama User" required>
+                                <input type="text" value="{{ $edit->username }}" class="form-control" name="namaUser"
+                                    id="namaUser" placeholder="Nama User" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Email</label>

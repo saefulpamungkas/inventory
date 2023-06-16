@@ -35,7 +35,9 @@ class BarangController extends Controller
     public function store(Request $request)
     {
         Barang::create([
+            'kode_barang' => $request->kode_barang,
             'nama_barang' => $request->nama_barang,
+            'harga' => $request->harga,
             'jumlah_barang' => $request->jumlah_barang,
             'spek_barang' => $request->spek_barang,
         ]);
@@ -67,7 +69,9 @@ class BarangController extends Controller
         $barang = Barang::find($id);
 
         $barang->update([
+            'kode_barang' => $request->kode_barang,
             'nama_barang' => $request->nama_barang,
+            'harga' => $request->harga,
             'jumlah_barang' => $request->jumlah_barang,
             'spek_barang' => $request->spek_barang,
         ]);

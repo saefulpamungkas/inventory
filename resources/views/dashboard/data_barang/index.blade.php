@@ -47,7 +47,9 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Kode</th>
                                             <th>Nama Barang</th>
+                                            <th>Harga</th>
                                             <th>Stok</th>
                                             <th>Spek</th>
                                             <th>Action</th>
@@ -57,7 +59,9 @@
                                         @foreach ($barangs as $barang)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $barang->kode_barang }}</td>
                                                 <td>{{ $barang->nama_barang }}</td>
+                                                <td>{{ $barang->harga }}</td>
                                                 <td>{{ $barang->jumlah_barang }}</td>
                                                 <td>{{ $barang->spek_barang }}</td>
                                                 <td>
@@ -87,9 +91,9 @@
                 <div class="modal-header no-bd">
                     <h5 class="modal-title">
                         <span class="fw-mediumbold">
-                            Barang</span>
+                            Tambah</span>
                         <span class="fw-light">
-                            Masuk
+                            Barang
                         </span>
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -100,9 +104,19 @@
                     <div class="modal-body">
                         @csrf
                         <div class="form-group">
+                            <label for="">Kode Barang</label>
+                            <input type="text" class="form-control" name="kode_barang" id="kode_barang"
+                                placeholder="Masukan Kode" required>
+                        </div>
+                        <div class="form-group">
                             <label for="">Nama Barang</label>
                             <input type="text" class="form-control" name="nama_barang" id="nama_barang"
                                 placeholder="Masukan Barang" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Harga</label>
+                            <input type="number" class="form-control" name="harga" id="harga"
+                                placeholder="Masukan Harga" required>
                         </div>
                         <div class="form-group">
                             <label for="">Stok Barang</label>
@@ -135,9 +149,9 @@
                     <div class="modal-header no-bd">
                         <h5 class="modal-title">
                             <span class="fw-mediumbold">
-                                Edit Barang</span>
+                                Edit</span>
                             <span class="fw-light">
-                                Masuk
+                                Barang
                             </span>
                         </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -149,9 +163,19 @@
                         <div class="modal-body">
                             @csrf
                             <div class="form-group">
+                                <label for="">Kode Barang</label>
+                                <input type="text" value="{{ $edit->kode_barang }}" class="form-control"
+                                    name="kode_barang" id="kode_barang" placeholder="Masukan Barang" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="">Nama Barang</label>
                                 <input type="text" value="{{ $edit->nama_barang }}" class="form-control"
                                     name="nama_barang" id="nama_barang" placeholder="Masukan Barang" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Harga</label>
+                                <input type="number" value="{{ $edit->harga }}" class="form-control" name="harga"
+                                    id="harga" placeholder="Masukan Harga" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Stok Barang</label>

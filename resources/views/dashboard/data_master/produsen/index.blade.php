@@ -109,12 +109,12 @@
                         </div>
                         <div class="form-group">
                             <label for="">No Seluler</label>
-                            <input type="text" class="form-control" name="no_seluler" id="no_seluler"
+                            <input type="number" class="form-control" name="no_seluler" id="no_seluler"
                                 placeholder="Masukan Angka" required>
                         </div>
                         <div class="form-group">
                             <label for="">No Hp WA</label>
-                            <input type="text" class="form-control" name="no_telp_wa" id="no_telp_wa"
+                            <input type="number" class="form-control" name="no_telp_wa" id="no_telp_wa"
                                 placeholder="Masukan Angka" required>
                         </div>
                         <div class="form-group">
@@ -163,12 +163,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="">No Seluler</label>
-                                <input type="text" class="form-control" value="{{ $pro->no_seluler }}"
+                                <input type="number" class="form-control" value="{{ $pro->no_seluler }}"
                                     name="no_seluler" id="no_seluler" placeholder="Masukan Angka" required>
                             </div>
                             <div class="form-group">
                                 <label for="">No Telp WA</label>
-                                <input type="text" class="form-control" value="{{ $pro->no_telp_wa }}"
+                                <input type="number" class="form-control" value="{{ $pro->no_telp_wa }}"
                                     name="no_telp_wa" id="no_telp_wa" placeholder="" required>
                             </div>
                             <div class="form-group">

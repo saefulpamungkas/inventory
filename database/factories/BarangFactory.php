@@ -18,8 +18,9 @@ class BarangFactory extends Factory
     {
         return [
             // 'id_masuk' => fake()->numberBetween(1, 2),
-            // 'id_produksi' => fake()->numberBetween(1, 2),
-            'nama_barang' => fake()->randomElement(['221A', '221B']),
+            'kode_barang' => fake()->randomElement(['221A', '221B']),
+            'nama_barang' => fake()->randomElement(['Putih', 'Merah']),
+            'harga' => fake()->randomElement(['221A', '221B']),
             'jumlah_barang' => fake()->numberBetween(0, 0),
             'spek_barang' => fake()->randomElement(['12 yard', '14 yard']),
         ];
